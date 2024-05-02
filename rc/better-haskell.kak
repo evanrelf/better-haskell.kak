@@ -8,6 +8,10 @@
 # TODO: makeLenses is highlighted like a top-level declaration
 # TODO: Labels should be highlighted differently
 
+hook global BufCreate .*[.](hs-boot|chs|hsc) %{
+  set-option buffer filetype haskell
+}
+
 hook -group haskell-highlight global WinSetOption filetype=haskell %{
   hook -once global NormalIdle .* %{
     require-module better-haskell
