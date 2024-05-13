@@ -26,7 +26,7 @@ add-highlighter shared/better-haskell regions
 add-highlighter shared/better-haskell/code default-region group
 add-highlighter shared/better-haskell/string region '(?<![\\])"' (?<!\\)(\\\\)*" fill string
 # TODO: Doesn't highlight `'_'`, `'['`, `'('` correctly
-add-highlighter shared/better-haskell/character region (?<![\\\w@])'(?!['\w\[\(]) (?<!\\)(\\\\)*' fill string
+# add-highlighter shared/better-haskell/character region (?<![\\\w@])'(?!['\w\[\(]) (?<!\\)(\\\\)*' fill string
 add-highlighter shared/better-haskell/comment region -recurse \{-(?!#) \{-(?!#) (?<!#)-\} fill comment
 add-highlighter shared/better-haskell/line_comment region -- $ fill comment
 add-highlighter shared/better-haskell/pragma region '\{-#' '#-\}' fill meta
